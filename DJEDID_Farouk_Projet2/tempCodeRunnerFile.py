@@ -1,0 +1,1 @@
+SELECT count(*) as count , annee FROM resultats WHERE sexe = 'f' GROUP BY annee HAVING AVG(moyenne) >= 10

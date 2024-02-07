@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>	
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	</head>
+	<body>
+		<div class="all">
+			<div class="left">
+				<img src="{{url_for('static', filename='img/dashboard_icon_182989.png')}}" height="60px" width="60px"/>
+				<h4>menu</h4>
+				
+			</div>
+			<div class="container">
+				<header class="header">
+					<p id="titre">Dashboard University </p>
+				</header>
+				<div class="nav">					
+					<div id="btns">
+						<button id="actualiser" onclick="load()" style="background-color: greenyellow; width: 400px;">Actualiser</button>
+					</div>		
+				</div>
+			  <div class="center">
+				<div class="dashboard">
+					<div class="box">	
+						<div class="b-header">
+							<p>Evolution des moyennes par specialité</p>
+						</div>
+						<div class="graph">
+							<canvas id="line-chart" height="200" width="500"></canvas>
+						</div>
+					</div>
+					<div class="box">	
+						<div class="b-header">
+							<p>Nombre des etudiant pour chaque specialité en 2019</p>
+						</div>
+						<div class="graph">	
+							<canvas id="bar-chart" height="200" width="400"></canvas>
+						</div>				
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Nombre des hommes et des femmes admis en 2020 </p>
+						</div>
+						<div class="graph">
+							<canvas id="radar-chart"  height="200" width="400" style="margin-left: 35px;"></canvas>	
+						</div>
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Nombre des hommes et des femmes admis </p>
+						</div>
+						<div class="graph">
+							<canvas id="pie-chart" height="200" width="400" style="margin-top: 20px;"></canvas>	
+						</div>
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Nombre des hommes admis pour chaque specialité </p>
+						</div>
+						<div class="graph">
+							<canvas id="polarArea-chart"  height="200" width="400"></canvas>	
+						</div>		
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Nombre des étudiant ajournés pour chaque année </p>
+						</div>
+						<div class="graph">
+							<canvas id="horisentalbar-chart"  height="200" width="400"  style="margin-top: 30px;"></canvas>	
+						</div>	
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Nombre des etudiant admis pour chaque année </p>
+						</div>
+						<div class="graph">
+							<canvas id="doughnut-chart"  height="200" width="400"></canvas>	
+						</div>
+					</div>
+					<div class="box">		
+						<div class="b-header">
+							<p>Analyse des moyennes </p>
+						</div>
+						<div class="graph">
+							<canvas id="Polar-chart" height="200" width="400" style="margin-top: 40px;"></canvas>	
+						</div>
+					</div>
+				</div>
+			  </div>
+			  <div class="footer"><h1>footer</h1></div>
+			</div>
+		</div>
+		
+		<script src="{{url_for('static', filename='script.js')}}"></script>	
+	</body>
+	
+</html>
